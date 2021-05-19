@@ -18,10 +18,10 @@ CREATE TABLE stars
     size VARCHAR(255) NOT NULL,
     mass VARCHAR(255) NOT NULL,
     galaxyId INT NOT NULL,
-    
+
     PRIMARY KEY (id),
 
     FOREIGN KEY (galaxyId)
-    REFERENCES galaxies
+    REFERENCES galaxies (id)
     ON DELETE CASCADE
 );
