@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj": {}
+    "C:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj": {}
   },
   "projects": {
-    "c:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj": {
+    "C:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj",
+        "projectUniqueName": "C:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj",
         "projectName": "galaxies",
-        "projectPath": "c:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj",
+        "projectPath": "C:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj",
         "packagesPath": "C:\\Users\\afost\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\obj\\",
+        "outputPath": "C:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\afost\\AppData\\Roaming\\NuGet\\NuGet.Config"

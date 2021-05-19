@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jCuwamHBqxN9ZWTQHDdQvGExFACM7iLd3r1vgZECnPDZWjVLDVN7R6lxVHSPIM6yJLasB6nafndu+dRvbnsk3Q==",
+  "dgSpecHash": "W0/Ua+kEMpqRWyh2hOr9rwHlwgR7w6Zqc2fhZ4o+egWPJM+BUGto66BM7QjgWPxPXBuzI/JZtB1EG6APYSYX0A==",
   "success": true,
-  "projectFilePath": "c:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj",
+  "projectFilePath": "C:\\Users\\afost\\source\\coding-applications\\csharp-folder\\galaxies\\galaxies.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\afost\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\afost\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

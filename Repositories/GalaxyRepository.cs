@@ -21,5 +21,18 @@ namespace galaxies.Repositories
             string sql = "SELECT * FROM galaxies;";
             return _db.Query<Galaxy>(sql);
         }
+
+        public Galaxy Create(Galaxy galaxy)
+        {
+            string sql = @"
+            INSERT INTO galaxies
+            (name, color, stellarContent)
+            VALUES
+            (@Name, @Color, @StellarContent);
+            SELECT LAST_INSERT_ID();";
+            int id = _db.ExecuteScalar<int>(sql, galaxy);
+            galaxy.Id = id;
+            return galaxy;
+        }
     }
 }

@@ -19,5 +19,10 @@ namespace galaxies.Services
         {
            return _repo.GetAll();
         }
+
+        public Galaxy Create(Galaxy galaxy)
+        {
+            return _repo.Create(galaxy);
+        }
     }
 }

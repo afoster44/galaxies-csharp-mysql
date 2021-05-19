@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using galaxies.Repositories;
+using galaxies.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,11 +33,17 @@ namespace galaxies
 
             services.AddScoped<IDbConnection>(x => CreateDbConnection());
 
+            
+
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "galaxies", Version = "v1" });
             });
+
+            services.AddTransient<GalaxyService>();
+            services.AddTransient<GalaxyRepository>();
         }
 
         private IDbConnection CreateDbConnection()
