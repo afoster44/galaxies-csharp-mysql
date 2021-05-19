@@ -30,12 +30,40 @@ namespace galaxies.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public  ActionResult<Star> GetById(int id)
+        {
+            try
+            {
+                return Ok(_service.GetById(id));
+            }
+            catch (System.Exception err)
+            {
+                
+                return BadRequest(err.Message);
+            }
+        }
+
         [HttpPost]
         public ActionResult<Star> Create([FromBody] Star star)
         {
             try
             {
                 return Ok(_service.Create(star));
+            }
+            catch (System.Exception err)
+            {
+                
+                return BadRequest(err.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult<Star> Delete(int id)
+        {
+            try
+            {
+                return Ok(_service.Delete(id));
             }
             catch (System.Exception err)
             {

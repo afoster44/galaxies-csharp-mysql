@@ -19,9 +19,20 @@ namespace galaxies.Services
             return _repo.GetAll();
         }
 
+        public Star GetById(int id)
+        {
+            return _repo.GetById(id);
+        }
+
         public Star Create(Star star)
         {
             return _repo.Create(star);
+        }
+
+        public string Delete(int id)
+        {
+            _repo.Delete(id);
+            return "Deleted";
         }
     }
 }
