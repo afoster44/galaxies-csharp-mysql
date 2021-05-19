@@ -20,9 +20,20 @@ namespace galaxies.Services
            return _repo.GetAll();
         }
 
+         public Galaxy GetById(int id)
+        {
+            return _repo.GetById(id);
+        }
+
         public Galaxy Create(Galaxy galaxy)
         {
             return _repo.Create(galaxy);
+        }
+
+        public string Delete(int id)
+        {
+            _repo.Delete(id);
+            return "Deleted";
         }
     }
 }

@@ -31,6 +31,20 @@ namespace galaxies.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public ActionResult<Galaxy> GetById(int id)
+        {
+            try
+            {
+                return Ok(_service.GetById(id));
+            }
+            catch (System.Exception err)
+            {
+                
+                return BadRequest(err.Message);
+            }
+        }
+
         [HttpPost]
 
         public ActionResult<Galaxy> Create([FromBody] Galaxy galaxy)
@@ -38,6 +52,20 @@ namespace galaxies.Controllers
             try
             {
                 return Ok(_service.Create(galaxy));
+            }
+            catch (System.Exception err)
+            {
+                
+                return BadRequest(err.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult<Galaxy> Delete(int id)
+        {
+            try
+            {
+                return Ok(_service.Delete(id));
             }
             catch (System.Exception err)
             {
