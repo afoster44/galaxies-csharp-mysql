@@ -35,6 +35,12 @@ namespace galaxies.Repositories
             return planet;
         }
 
+        public void Delete(int id)
+        {
+            string sql = "DELETE FROM planets WHERE id = @id LIMIT 1;";
+            _db.Execute(sql, new {id});
+        }
+
         public Planet GetById(int id)
         {
             string sql = @"
