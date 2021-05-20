@@ -30,5 +30,19 @@ namespace galaxies.Controllers
                 return BadRequest(err.Message);
             }
         }
+
+        [HttpPost]
+        public ActionResult<Planet> Create([FromBody] Planet planet)
+        {
+            try
+            {
+                return Ok(_serv.Create(planet));
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+        }
     }
 }

@@ -20,5 +20,18 @@ namespace galaxies.Repositories
             string sql = "SELECT * FROM planets;";
             return _db.Query<Planet>(sql);
         }
+
+        internal Planet Create(Planet planet)
+        {
+            string sql = @"
+            INSERT INTO
+            (name, moons, color, starId)
+            VALUES
+            (@Name, @Moons, @Color, @StarId);
+            SELECT LAST_INSERT_ID();";
+            int id = _db.ExecuteScalar<int>(sql, planet);
+            planet.Id = id;
+            return planet;
+        }
     }
 }

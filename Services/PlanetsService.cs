@@ -18,5 +18,10 @@ namespace galaxies.Services
         {
             return _repo.GetAll();
         }
+
+        public Planet Create(Planet planet)
+        {
+            return _repo.Create(planet);
+        }
     }
 }
