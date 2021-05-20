@@ -38,10 +38,10 @@ namespace galaxies.Controllers
             {
                 return Ok(_serv.Create(planet));
             }
-            catch (System.Exception)
+            catch (System.Exception err)
             {
                 
-                throw;
+                return BadRequest(err.Message);
             }
         }
     }

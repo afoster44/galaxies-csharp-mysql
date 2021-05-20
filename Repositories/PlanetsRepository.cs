@@ -24,7 +24,7 @@ namespace galaxies.Repositories
         internal Planet Create(Planet planet)
         {
             string sql = @"
-            INSERT INTO
+            INSERT INTO planets
             (name, moons, color, starId)
             VALUES
             (@Name, @Moons, @Color, @StarId);
