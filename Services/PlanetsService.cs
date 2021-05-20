@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using galaxies.Models;
 using galaxies.Repositories;
 
 namespace galaxies.Services
@@ -9,6 +12,11 @@ namespace galaxies.Services
         public PlanetsService(PlanetsRepository repo)
         {
             _repo = repo;
+        }
+
+        public IEnumerable<Planet> GetAll()
+        {
+            return _repo.GetAll();
         }
     }
 }
