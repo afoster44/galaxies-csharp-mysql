@@ -7,5 +7,6 @@ namespace galaxies.Models
         public int Moons { get; set; }
         public string Color { get; set; }
         public int StarId { get; set; }
+        public Star Star { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using Dapper;
 using galaxies.Models;
 
@@ -32,6 +33,22 @@ namespace galaxies.Repositories
             int id = _db.ExecuteScalar<int>(sql, planet);
             planet.Id = id;
             return planet;
+        }
+
+        public Planet GetById(int id)
+        {
+            string sql = @"
+            SELECT
+            p.*,
+            star.*
+            FROM planets plan
+            JOIN stars star WHERE plan.starId = star.id
+            WHERE plan.id = @id;";
+            return _db.Query<Planet, Star, Planet>(sql, (planet, star) =>
+            {
+                planet.Star = star;
+                return planet;
+            }, new {id}, splitOn: "id").FirstOrDefault();
         }
     }
 }

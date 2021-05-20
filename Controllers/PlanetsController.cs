@@ -31,6 +31,20 @@ namespace galaxies.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public ActionResult<Planet> GetById(int id)
+        {
+            try
+            {
+                return Ok(_serv.GetById(id));
+            }
+            catch (System.Exception err)
+            {
+                
+                return BadRequest(err.Message);
+            }
+        }
+
         [HttpPost]
         public ActionResult<Planet> Create([FromBody] Planet planet)
         {
