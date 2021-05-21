@@ -6,5 +6,6 @@ namespace galaxies.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public int PlanetId { get; set; }
+        public Planet Planet { get; set; }
     }
 }

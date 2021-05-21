@@ -19,9 +19,16 @@ namespace galaxies.Services
             return _repo.GetAll();
         }
 
+        public Species GetById(int id)
+        {
+            return _repo.GetById(id);
+        }
+
         public Species Create(Species species)
         {
             return _repo.Create(species);
         }
+
+        
     }
 }

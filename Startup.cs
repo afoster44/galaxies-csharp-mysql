@@ -48,6 +48,8 @@ namespace galaxies
             services.AddTransient<StarsRepository>();
             services.AddTransient<PlanetsService>();
             services.AddTransient<PlanetsRepository>();
+            services.AddTransient<SpeciesService>();
+            services.AddTransient<SpeciesRepository>();
         }
 
         private IDbConnection CreateDbConnection()

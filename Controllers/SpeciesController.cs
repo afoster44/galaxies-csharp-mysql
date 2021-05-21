@@ -30,6 +30,20 @@ namespace galaxies.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public ActionResult<Species> GetById(int id)
+        {
+            try
+            {
+                return Ok(_serv.GetById(id));
+            }
+            catch (System.Exception err)
+            {
+                
+                return BadRequest(err.Message);
+            }
+        }
+
         [HttpPost]
         public ActionResult<Species> Create([FromBody] Species species)
         {

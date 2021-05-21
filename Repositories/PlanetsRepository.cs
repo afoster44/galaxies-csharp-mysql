@@ -45,10 +45,10 @@ namespace galaxies.Repositories
         {
             string sql = @"
             SELECT
-            p.*,
+            plan.*,
             star.*
             FROM planets plan
-            JOIN stars star WHERE plan.starId = star.id
+            JOIN stars star ON plan.starId = star.id
             WHERE plan.id = @id;";
             return _db.Query<Planet, Star, Planet>(sql, (planet, star) =>
             {
