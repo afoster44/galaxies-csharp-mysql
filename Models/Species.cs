@@ -8,4 +8,9 @@ namespace galaxies.Models
         public int PlanetId { get; set; }
         public Planet Planet { get; set; }
     }
+
+    public class SpeciesPlanet : Species
+    {
+        public int SpeciesPlanetId { get; set; }
+    }
 }

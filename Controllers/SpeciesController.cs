@@ -57,5 +57,19 @@ namespace galaxies.Controllers
                 return BadRequest(err.Message);
             }
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult<Species> Delete(int id)
+        {
+            try
+            {
+                return Ok(_serv.Delete(id));
+            }
+            catch (System.Exception err)
+            {
+                
+                return BadRequest(err.Message);
+            }
+        }
     }
 }

@@ -29,6 +29,10 @@ namespace galaxies.Services
             return _repo.Create(species);
         }
 
-        
+        public string Delete(int id)
+        {
+            _repo.Delete(id);
+            return "Deleted";
+        }
     }
 }

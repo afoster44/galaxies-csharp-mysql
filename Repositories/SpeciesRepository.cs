@@ -38,7 +38,7 @@ namespace galaxies.Repositories
             }, new {id}, splitOn: "id").FirstOrDefault();
         }
 
-        internal Species Create(Species species)
+        public Species Create(Species species)
         {
             string sql = @"
             INSERT INTO species
@@ -51,6 +51,10 @@ namespace galaxies.Repositories
             return species;
         }
 
-        
+        public void Delete(int id)
+        {
+            string sql = "DELETE * FROM species WHERE id = @id LIMIT 1;";
+            _db.Execute(sql);
+        }
     }
 }
