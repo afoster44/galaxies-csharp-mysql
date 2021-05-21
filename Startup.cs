@@ -50,6 +50,8 @@ namespace galaxies
             services.AddTransient<PlanetsRepository>();
             services.AddTransient<SpeciesService>();
             services.AddTransient<SpeciesRepository>();
+            services.AddTransient<PlanetsSpeciesService>();
+            services.AddTransient<PlanetsSpeciesRepository>();
         }
 
         private IDbConnection CreateDbConnection()

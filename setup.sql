@@ -40,15 +40,31 @@ USE amazenaf;
 --     ON DELETE CASCADE
 -- )
 
-CREATE TABLE species
+-- CREATE TABLE species
+-- (
+--     id INT NOT NULL AUTO_INCREMENT,
+--     name VARCHAR(255) NOT NULL,
+--     description VARCHAR(255) NOT NULL,
+--     planetId INT NOT NULL,
+--     PRIMARY KEY (id),
+
+--     FOREIGN KEY (planetId)
+--     REFERENCES planets (id)
+--     ON DELETE CASCADE
+-- )
+
+CREATE TABLE planetsspecies
 (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    description VARCHAR(255) NOT NULL,
     planetId INT NOT NULL,
+    speciesId INT NOT NULL,
     PRIMARY KEY (id),
 
     FOREIGN KEY (planetId)
     REFERENCES planets (id)
+    ON DELETE CASCADE,
+
+    FOREIGN KEY (speciesId)
+    REFERENCES species (id)
     ON DELETE CASCADE
 )
